@@ -1,5 +1,5 @@
 class TeamsController < ApplicationController
-  before_filter :authenticate_user!, :except => [:index, :twiki_index, :twiki_new]
+  before_filter :authenticate_user!, :except => [:index, :twiki_index, :twiki_new, :index_photos]
   require 'csv'
 
   layout 'cmu_sv'
