@@ -4,6 +4,7 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+<<<<<<< HEAD
     <orderEntry type="library" scope="PROVIDED" name="newrelic_rpm (v3.2.0, RVM: ruby-1.9.2-p180 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ruby-openid-apps-discovery (v1.2.0, RVM: ruby-1.9.2-p180 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rdoc (v3.9.4, RVM: ruby-1.9.2-p180 [global]) [gem]" level="application" />
@@ -135,6 +136,8 @@
     <orderEntry type="library" scope="PROVIDED" name="omniauth (v0.3.0.rc3, RVM: ruby-1.9.2-p180 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-mount (v0.8.3, RVM: ruby-1.9.2-p180 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="childprocess (v0.2.2, RVM: ruby-1.9.2-p180 [global]) [gem]" level="application" />
+=======
+>>>>>>> 9c07488052789e3f5ecf5dee89ec41cb617c5877
   </component>
 </module>
 

@@ -1,0 +1,12 @@
+.bundle
+db/*.sqlite3
+log/*.log
+webrat.log
+tmp/
+.idea/*
+coverage/*
+doc/coverage/*
+tmp/*
+*DS_Store
+.rspec
+.bundle
