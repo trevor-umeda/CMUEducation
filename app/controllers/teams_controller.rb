@@ -8,8 +8,6 @@ class TeamsController < ApplicationController
   def remove_team_member
     team = Team.find(params[:team_id])
     team.remove_person(params[:person_id])
-    team.save
-
     render :layout=>false
   end
 
