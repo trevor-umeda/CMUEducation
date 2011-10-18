@@ -301,9 +301,9 @@ class TeamsController < ApplicationController
     @team.peer_evaluation_second_email = params[:team][:peer_evaluation_second_email]
 
     if @team.save
-      flash[:notice] = 'Dates saved'
-    else
       flash[:error] = 'Dates not saved'
+    else
+      flash[:notice] = 'Dates saved'
     end
     redirect_to(peer_evaluation_path(@team.course, @team.id))
   end
@@ -325,7 +325,7 @@ class TeamsController < ApplicationController
 #  end
 
   def update_course_faculty_label
-    @course = Course.find(params[:course_id])
+    @course = Course.find(params[:course_name])
     if @course.primary_faculty_label != params[:primary_faculty_label] || @course.secondary_faculty_label != params[:seconday_faculty_label] then
       @course.primary_faculty_label = params[:primary_faculty_label]
       @course.secondary_faculty_label = params[:secondary_faculty_label]
