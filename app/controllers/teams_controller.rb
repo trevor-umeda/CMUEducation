@@ -275,10 +275,10 @@ class TeamsController < ApplicationController
     @full_names = []
     @ids = []
     @team.people.each do |person|
-      @emails << person.email
-      @first_names << person.first_name
-      @full_names << person.human_name
-      @ids << person.id
+      @emails = person.email
+      @first_names = person.first_name
+      @full_names = person.human_name
+      @ids = person.id
     end
 
     if (@team.peer_evaluation_first_email.nil?)
