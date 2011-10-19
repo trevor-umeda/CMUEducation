@@ -43,13 +43,13 @@ class Team < ActiveRecord::Base
     old_group_exists = false
     google_apps_connection.retrieve_all_groups.each do |list|
       group_name = list.group_id.split('@')[0]
-      old_group_exists = true if old_group == group_name
-      new_group_exists = true if new_group == group_name
+      old_group_exists = true if old_group.eql?(group_name)
+      new_group_exists = true if new_group.eql?(group_name)
     end
     if old_group_exists
       logger.info "Deleting #{old_group}"
       google_apps_connection.delete_group(old_group)
-      new_group_exists = false if old_group == new_group
+      new_group_exists = false if old_group.eql?(new_group)
     end
 
     if !new_group_exists
@@ -66,7 +66,7 @@ class Team < ActiveRecord::Base
     all_team_members = google_apps_connection.retrieve_all_members(new_group)
     google_list = all_team_members.map { |l| l.member_id }.sort
     team_list = self.people.map { |l| l.email }.sort
-    unless google_list.eql?(team_list)
+    unless google_list.equal?(team_list)
       logger.warn("The people on the google list isn't right")
       logger.warn("google list: #{google_list} ")
       logger.warn("team list: #{team_list} ")
