@@ -57,11 +57,11 @@
     <% end %>
      </td>
 
-    <% if current_user && (current_user.is_staff? || current_user.is_admin?) %>
+    <% if (current_user.is_staff? || current_user.is_admin?) %>
     <td><%= link_to 'Show', course_team_path(@course, team), :target => '_top' %></td>
     <% end %>
     <td><%= link_to 'Edit', edit_course_team_path(@course, team), :target => '_top' %></td>
-    <% if current_user && current_user.is_admin %>
+    <% if current_user.is_admin %>
     <td><%= link_to 'Destroy', course_team_path(@course, team), :target => '_top', :confirm => 'Are you sure?', :method => :delete %></td>
     <% end %>
   </tr>
