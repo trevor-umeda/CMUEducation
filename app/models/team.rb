@@ -33,7 +33,7 @@ class Team < ActiveRecord::Base
 #    end
   end
 
-  def update_google_mailing_list(new_email, old_email, id)
+  def update_google_mailing_list(old_email,new_email, id)
     logger.info("team.update_google_mailing_list(#{new_email}, #{old_email}, #{id}) executed")
 
     new_group = new_email.split('@')[0] unless new_email.blank?
