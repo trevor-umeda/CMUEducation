@@ -3,6 +3,8 @@
    <%= javascript_tag do %>
 	$(function() {
 		$("#team_peer_evaluation_first_email").datepicker({
+          minDate: new Date(2007, 1 - 1, 1),
+          maxDate: new Date(2010, 1 - 1, 1),
           showButtonPanel: true,
           dateFormat: 'yy-mm-dd'
         });
@@ -60,7 +62,7 @@
 <% end %>
 
 <h2>Step 2: Generate feedback for these students</h2>
-<p><%= link_to "Edit the peer evaluation reports", :action => "edit_report", :id => params[:id], :controller => "peer_evaluation" %></p>
+<p><%= link_to "Edit the peer evaluation reports", :action => "edit", :id => params[:id], :controller => "teams" %></p>
 
 <%end%>
 <br/>

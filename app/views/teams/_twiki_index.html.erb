@@ -16,7 +16,7 @@ background-color: #6B7F93;
 <% if @show_create_course %>
 
 <% if Rails.env.development? %>
-<%= link_to 'Add teams to your course?', '/twiki/teams/new' %>
+<%= link_to 'Add teams to your course?', '/twiki/teams/add' %>
 <% else %>
 <%= link_to 'Add teams to your course?', 'http://info.sv.cmu.edu/rails/twiki/teams/new' %>
 <% end %>
