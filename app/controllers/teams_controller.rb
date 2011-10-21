@@ -327,9 +327,8 @@ class TeamsController < ApplicationController
   def update_course_faculty_label
     @course = Course.find(params[:course_name])
     if @course.primary_faculty_label != params[:primary_faculty_label] || @course.secondary_faculty_label != params[:seconday_faculty_label] then
-      @course.primary_faculty_label = params[:primary_faculty_label]
-      @course.secondary_faculty_label = params[:secondary_faculty_label]
-      @course.save
+     @course.update_attributes(:primary_faculty_label => params[:primary_faculty_label], :secondary_faculty_label => params[:primary_faculty_label] )
+
     end
   end
 end
