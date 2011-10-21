@@ -10,8 +10,7 @@ class Team < ActiveRecord::Base
   attr :team_members_list_changed, true
 
   before_validation :clean_up_data
-  after_save :update_mailing_list
-  before_save :copy_peer_evaluation_dates_from_course, :invalidate_team_email
+  before_save :copy_peer_evaluation_dates_from_course, :invalidate_team_email, :update_mailing_list
 
   before_destroy :remove_google_group
 
