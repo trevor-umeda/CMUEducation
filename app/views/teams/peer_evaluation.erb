@@ -34,7 +34,7 @@
 <h2>Step 0: See what the student will see</h2>
 <%end%>
 
-<p><%= link_to "Complete the peer evaluation", :action => "edit_evaluation", :id => params[:id], :controller => "peer_evaluation" %>
+<p><%= link_to "Complete the peer evaluation", :action => "edit_evaluation", :id => params[:id] %>
 </p>
 
 <%if current_user && (current_user.is_staff || current_user.is_admin)%>
